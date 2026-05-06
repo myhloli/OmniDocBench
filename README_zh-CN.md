@@ -1895,6 +1895,11 @@ config中参数解释以及数据集格式请参考`Layout检测`小节，公式
       <td><a href="https://huggingface.co/FireRedTeam/FireRed-OCR">HuggingFace FireRed-OCR</a></td>
     </tr>
     <tr>
+      <td>Qianfan-OCR</td>
+      <td><a href="https://huggingface.co/baidu/Qianfan-OCR">Qianfan-OCR</a></td>
+      <td><a href="https://huggingface.co/baidu/Qianfan-OCR">HuggingFace Qianfan-OCR</a></td>
+    </tr>
+    <tr>
       <td>dots.ocr</td>
       <td><a href="https://github.com/rednote-hilab/dots.ocr">dots.ocr</a></td>
       <td><a href="https://huggingface.co/rednote-hilab/dots.ocr">HuggingFace dots.ocr</a></td>
