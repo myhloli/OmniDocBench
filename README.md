@@ -62,6 +62,8 @@ Currently supported metrics include:
 
 ## Updates
 
+[2026/04/30] Updated from **v1.6** to **v1.7**, added the Qianfan-OCR leaderboard, and supported skills-based evaluation.
+
 [2026/04/10] **Major update**: Updated from **v1.5** to **v1.6**
   - Evaluation code: (1) We propose **Multi-Granularity Adaptive Matching (MGAM)**, which eliminates matching bias through adaptive granularity adjustment on the prediction side. The core principle is to keep the ground truth unchanged and **search for the optimal segmentation granularity only on the prediction side.** (2) To optimize the deployment of CDM, dependency packages such as Node.js and KaTeX have been rewritten in Python and replaced, resulting in an approximately 3x speed improvement.
   - Benchmark dataset: (1) Added **296 new pages**, samples are chosen to cover the **more challenging scenario categories** in document parsing, including complex nested tables, dense mathematical formula layouts, and unconventional layout structures; (2) Fixed typos in some text and table annotations；
@@ -404,7 +406,7 @@ bash script/build_repro_docker_image.sh
 ```bash
 conda create -n omnidocbench python=3.10 -y
 conda activate omnidocbench
-git clone <repo_url> && cd Omnidocbench_v1.6
+git clone <repo_url> && cd Omnidocbench
 pip install -e .
 python -c "from src.core.pipeline import run_config_file; print('OK')"
 ```
@@ -496,6 +498,15 @@ All evaluation inputs are configured through [configs/end2end.yaml](./configs/en
 ```bash
 python pdf_validation.py --config <config_path>
 ```
+</details>
+
+<details>
+<summary><b>Option C: skills</b></summary>
+
+```bash
+I need to evaluate an xx model with OmniDocBench using Docker. The GT path is /path/OmniDocBench.json, the prediction result path is /path/predfolder, and CDM is required. Please help me run the evaluation.
+```
+</details>
 
 ### End-to-End Evaluation
 
