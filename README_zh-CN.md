@@ -95,7 +95,7 @@ OmniDocBench
 
 该评测集涉及1651个PDF页面，涵盖10种文档类型、5种排版类型和5种语言类型。OmniDocBench具有丰富的标注，包含28个block级别的标注（文本段落、标题、表格等）和4个Span级别的标注（文本行、行内公式、角标等）。所有文本相关的标注框上都包含文本识别的标注，公式包含LaTeX标注，表格包含LaTeX和HTML两种类型的标注。OmniDocBench还提供了各个文档组件的阅读顺序的标注。除此之外，在页面和block级别还包含多种属性标签，标注了5种页面属性标签、3种文本属性标签和6种表格属性标签。
 
-![](https://github.com/user-attachments/assets/f3e53ba8-bb97-4ca9-b2e7-e2530865aaa9)
+![](assets/benchmark_introduction.jpg)
 
 <details>
   <summary>【评测集的数据格式】</summary>
@@ -319,7 +319,7 @@ OmniDocBench
 
 OmniDocBench开发了一套基于文档组件拆分和匹配的评测方法，对文本、表格、公式、阅读顺序这四大模块分别提供了对应的指标计算，评测结果除了整体的精度结果以外，还提供了分页面以及分属性的精细化评测结果，精准定位模型文档解析的痛点问题。
 
-![](https://github.com/user-attachments/assets/95c88aaa-75dc-432e-891e-17a7d73e024a)
+![](assets/evaluation.jpg)
 
 ### 环境配置和运行
 
@@ -761,6 +761,17 @@ $$\text{Overall} = \frac{(1-\textit{Text Edit Distance}) \times 100 + \textit{Ta
             <td>81.43</td>
             <td>84.82</td>
             <td>0.167</td>
+        </tr>
+        <tr>
+            <td>MinerU-Pipeline</td>
+            <td>Pipeline Tools</td>
+            <td>-</td>
+            <td>85.75</td>
+            <td>0.063</td>
+            <td>83.07</td>
+            <td>80.43</td>
+            <td>88.22</td>
+            <td>0.154</td>
         </tr>
         <tr>
             <td>olmOCR</td>
@@ -1865,9 +1876,9 @@ config中参数解释以及数据集格式请参考`Layout检测`小节，公式
   </thead>
   <tbody>
     <tr>
-      <td>MinerU</td>
-      <td><a href="https://mineru.org.cn/">MinerU</a></td>
-      <td>2.1.1</td>
+      <td>MinerU-Pipeline</td>
+      <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
+      <td>3.3.0</td>
     </tr>
     <tr>
       <td>MinerU2-VLM</td>
@@ -1878,6 +1889,11 @@ config中参数解释以及数据集格式请参考`Layout检测`小节，公式
       <td>MinerU2.5</td>
       <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
       <td><a href="https://huggingface.co/opendatalab/MinerU2.5-2509-1.2B">HuggingFace MinerU2.5-2509-1.2B</a></td>
+    </tr>
+    <tr>
+      <td>MinerU2.5-Pro</td>
+      <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
+      <td><a href="https://huggingface.co/opendatalab/MinerU2.5-Pro-2605-1.2B">HuggingFace MinerU2.5-Pro-2605-1.2B</a></td>
     </tr>
     <tr>
       <td>GLM-OCR</td>

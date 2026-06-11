@@ -97,7 +97,7 @@ Currently supported metrics include:
 
 This benchmark includes 1651 PDF pages, covering 10 document types, 5 layout types, and 5 language types. OmniDocBench features rich annotations, containing 28 block-level annotations (text paragraphs, headings, tables, etc.) and 4 span-level annotations (text lines, inline formulas, subscripts, etc.). All text-related annotation boxes include text recognition annotations, formulas contain LaTeX annotations, and tables include both LaTeX and HTML annotations. OmniDocBench also provides reading order annotations for document components. Additionally, it includes various attribute tags at the page and block levels, with annotations for 5 page attribute tags, 3 text attribute tags, and 6 table attribute tags.
 
-![](https://github.com/user-attachments/assets/f3e53ba8-bb97-4ca9-b2e7-e2530865aaa9)
+![](assets/benchmark_introduction.jpg)
 
 <details>
   <summary>【Dataset Format】</summary>
@@ -328,7 +328,7 @@ Block level attribute - Formula related attributes:
 
 OmniDocBench has developed an evaluation methodology based on document component segmentation and matching. It provides corresponding metric calculations for four major modules: text, tables, formulas, and reading order. In addition to overall accuracy results, the evaluation also provides fine-grained evaluation results by page and attributes, precisely identifying pain points in model document parsing.
 
-![](https://github.com/user-attachments/assets/95c88aaa-75dc-432e-891e-17a7d73e024a)
+![](assets/evaluation.jpg)
 
 ### Environment Setup and Running
 
@@ -771,6 +771,17 @@ $$\text{Overall} = \frac{(1-\textit{Text Edit Distance}) \times 100 + \textit{Ta
             <td>81.43</td>
             <td>84.82</td>
             <td>0.167</td>
+        </tr>
+        <tr>
+            <td>MinerU-Pipeline</td>
+            <td>Pipeline Tools</td>
+            <td>-</td>
+            <td>85.75</td>
+            <td>0.063</td>
+            <td>83.07</td>
+            <td>80.43</td>
+            <td>88.22</td>
+            <td>0.154</td>
         </tr>
         <tr>
             <td>olmOCR</td>
@@ -1874,9 +1885,10 @@ We provide several tools in the `tools` directory:
   </thead>
   <tbody>
     <tr>
-      <td>MinerU</td>
-      <td><a href="https://mineru.org.cn/">MinerU</a></td>
-      <td>2.1.1</td>
+    <tr>
+      <td>MinerU-Pipeline</td>
+      <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
+      <td>3.3.0</td>
     </tr>
     <tr>
       <td>MinerU2-VLM</td>
@@ -1887,6 +1899,11 @@ We provide several tools in the `tools` directory:
       <td>MinerU2.5</td>
       <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
       <td><a href="https://huggingface.co/opendatalab/MinerU2.5-2509-1.2B">HuggingFace MinerU2.5-2509-1.2B</a></td>
+    </tr>
+    <tr>
+      <td>MinerU2.5-Pro</td>
+      <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
+      <td><a href="https://huggingface.co/opendatalab/MinerU2.5-Pro-2605-1.2B">HuggingFace MinerU2.5-Pro-2605-1.2B</a></td>
     </tr>
     <tr>
       <td>GLM-OCR</td>
