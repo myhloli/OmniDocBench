@@ -1885,9 +1885,10 @@ We provide several tools in the `tools` directory:
   </thead>
   <tbody>
     <tr>
+    <tr>
       <td>MinerU</td>
-      <td><a href="https://mineru.org.cn/">MinerU</a></td>
-      <td>2.1.1</td>
+      <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
+      <td>3.3.0</td>
     </tr>
     <tr>
       <td>MinerU2-VLM</td>
@@ -1898,6 +1899,11 @@ We provide several tools in the `tools` directory:
       <td>MinerU2.5</td>
       <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
       <td><a href="https://huggingface.co/opendatalab/MinerU2.5-2509-1.2B">HuggingFace MinerU2.5-2509-1.2B</a></td>
+    </tr>
+    <tr>
+      <td>MinerU2.5-Pro</td>
+      <td><a href="https://github.com/opendatalab/MinerU">MinerU</a></td>
+      <td><a href="https://huggingface.co/opendatalab/MinerU2.5-Pro-2605-1.2B">HuggingFace MinerU2.5-Pro-2605-1.2B</a></td>
     </tr>
     <tr>
       <td>GLM-OCR</td>
